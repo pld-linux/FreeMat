@@ -1,8 +1,8 @@
 # TODO:
 # - look at MPI support - doesn't work with lam for me :/
 # - use system libffi
-Summary:	FreeMat is an environment for rapid engineering and scientific processing
-Summary(pl):	FreeMat jest ¶rodowiskiem dla szybkiego przetwarzania in¿ynieryjnego i naukowego
+Summary:	FreeMat - an environment for rapid engineering and scientific processing
+Summary(pl):	FreeMat - ¶rodowisko do szybkiego przetwarzania in¿ynieryjnego i naukowego
 Name:		FreeMat
 Version:	1.07
 Release:	1
@@ -12,6 +12,7 @@ Source0:	http://dl.sourceforge.net/freemat/%{name}-%{version}.tar.gz
 # Source0-md5:	6cedc67af2efce393364a673902e6319
 Source1:	%{name}.desktop
 URL:		http://freemat.sourceforge.net
+BuildRequires:	automake
 BuildRequires:	blas-devel
 BuildRequires:	gcc-g77
 BuildRequires:	libjpeg-devel
@@ -37,7 +38,7 @@ prototypów i danych dla in¿ynierów i naukowców. Jest podobny do
 komercyjnych systemów takich jak MATLAB z Mathworks i IDL z Research
 Group, ale na licencji Open Source. FreeMat cechuje siê miêdzy innymi
 bezkodowym interfejsem do zewnetrznego kodu C/C++/FORTRAN,
-równoleg³ym/rozproszonym algorytmem obliczeñ(poprzez MPI), oraz
+równoleg³ym/rozproszonym algorytmem obliczeñ (poprzez MPI), oraz
 rysowaniem i wy¶wietlaniem mo¿liwo¶ci.
 
 %prep
