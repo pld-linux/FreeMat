@@ -39,7 +39,7 @@ FreeMat jest darmowym ¶rodowiskiem do szybkiego przetwarzania
 prototypów i danych dla in¿ynierów i naukowców. Jest podobny do
 komercyjnych systemów takich jak MATLAB z Mathworks i IDL z Research
 Group, ale na licencji Open Source. FreeMat cechuje siê miêdzy innymi
-bezkodowym interfejsem do zewnetrznego kodu C/C++/FORTRAN,
+bezkodowym interfejsem do zewnêtrznego kodu C/C++/FORTRAN,
 równoleg³ym/rozproszonym algorytmem obliczeñ (poprzez MPI), oraz
 rysowaniem i wy¶wietlaniem mo¿liwo¶ci.
 
