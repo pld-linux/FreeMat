@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=FreeMat
+Comment=Environment for rapid engineering and scientific processing
+Comment[pl]=Środowisko do szybkiego przetwarzania inżynieryjnego i naukowego
+Exec=FreeMat
+Terminal=true
+Type=Application
+Encoding=UTF-8
+Categories=Science;Math;X-Numeric;
+# vi: encoding=utf-8
