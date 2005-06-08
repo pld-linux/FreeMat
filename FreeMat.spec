@@ -1,21 +1,26 @@
 # TODO:
 # - look at MPI support - doesn't work with lam for me :/
 # - use system libffi
+%define		fversion	%(echo %{version} |tr r -)
+%define		mversion	%(echo %{version} |cut -f -1 -d r)
 Summary:	FreeMat - an environment for rapid engineering and scientific processing
 Summary(pl):	FreeMat - ¶rodowisko do szybkiego przetwarzania in¿ynieryjnego i naukowego
 Name:		FreeMat
-Version:	1.09
-Release:	2
+Version:	1.10r1
+Release:	1
 License:	MIT
 Group:		Applications/Math
-Source0:	http://dl.sourceforge.net/freemat/%{name}-%{version}.tar.gz
-# Source0-md5:	87b9615d9071ccc3073fd3fe5d31bd6e
+Source0:	http://dl.sourceforge.net/freemat/%{name}-%{fversion}.tar.gz
+# Source0-md5:	46c02f2c8c882c7d6f968d21c5a62b27
 Source1:	%{name}.desktop
+Patch0:		%{name}-system_ffi.patch
 URL:		http://freemat.sourceforge.net
+BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	blas-devel
 BuildRequires:	fltk-devel
 BuildRequires:	gcc-g77
+BuildRequires:	libffi-devel
 BuildRequires:	libjpeg-devel
 BuildRequires:	libpng-devel
 BuildRequires:	libstdc++-devel
@@ -43,12 +48,15 @@ równoleg³ym/rozproszonym algorytmem obliczeñ (poprzez MPI), oraz
 rysowaniem i wy¶wietlaniem mo¿liwo¶ci.
 
 %prep
-%setup -q
+%setup -q -n %{name}-%{mversion}
+%patch0
 
 %build
-cp -f %{_datadir}/automake/config.sub .
 CFLAGS="%{rpmcflags} -I%{_includedir}/ncurses"
 CXXFLAGS="%{rpmcflags} -I%{_includedir}/ncurses"
+%{__aclocal}
+%{__autoconf}
+%{__automake}
 %configure \
 	--with-ncurses
 
