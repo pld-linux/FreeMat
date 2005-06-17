@@ -15,6 +15,7 @@ Source0:	http://dl.sourceforge.net/freemat/%{name}-%{fversion}.tar.gz
 Source1:	%{name}.desktop
 Patch0:		%{name}-system_ffi.patch
 URL:		http://freemat.sourceforge.net
+BuildRequires:	XFree86-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	blas-devel
