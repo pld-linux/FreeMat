@@ -53,8 +53,8 @@ rysowaniem i wy¶wietlaniem mo¿liwo¶ci.
 %patch0
 
 %build
-CFLAGS="%{rpmcflags} -I%{_includedir}/ncurses"
-CXXFLAGS="%{rpmcflags} -I%{_includedir}/ncurses"
+CFLAGS="%{rpmcflags} -I/usr/include/ncurses"
+CXXFLAGS="%{rpmcflags} -I/usr/include/ncurses"
 %{__aclocal}
 %{__autoconf}
 %{__automake}
