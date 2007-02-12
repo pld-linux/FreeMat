@@ -4,7 +4,7 @@
 %define		fversion	%(echo %{version} |tr r -)
 %define		mversion	%(echo %{version} |cut -f -1 -d r)
 Summary:	FreeMat - an environment for rapid engineering and scientific processing
-Summary(pl.UTF-8):   FreeMat - środowisko do szybkiego przetwarzania inżynieryjnego i naukowego
+Summary(pl.UTF-8):	FreeMat - środowisko do szybkiego przetwarzania inżynieryjnego i naukowego
 Name:		FreeMat
 Version:	1.10r1
 Release:	1
