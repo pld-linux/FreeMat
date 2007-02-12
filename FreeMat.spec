@@ -4,7 +4,7 @@
 %define		fversion	%(echo %{version} |tr r -)
 %define		mversion	%(echo %{version} |cut -f -1 -d r)
 Summary:	FreeMat - an environment for rapid engineering and scientific processing
-Summary(pl):	FreeMat - ¶rodowisko do szybkiego przetwarzania in¿ynieryjnego i naukowego
+Summary(pl.UTF-8):   FreeMat - Å›rodowisko do szybkiego przetwarzania inÅ¼ynieryjnego i naukowego
 Name:		FreeMat
 Version:	1.10r1
 Release:	1
@@ -39,14 +39,14 @@ codeless interface to external C/C++/FORTRAN code,
 parallel/distributed algorithm development (via MPI), and plotting and
 visualiation capabilities.
 
-%description -l pl
-FreeMat jest darmowym ¶rodowiskiem do szybkiego przetwarzania
-prototypów i danych dla in¿ynierów i naukowców. Jest podobny do
-komercyjnych systemów takich jak MATLAB z Mathworks i IDL z Research
-Group, ale na licencji Open Source. FreeMat cechuje siê miêdzy innymi
-bezkodowym interfejsem do zewnêtrznego kodu C/C++/FORTRAN,
-równoleg³ym/rozproszonym algorytmem obliczeñ (poprzez MPI), oraz
-rysowaniem i wy¶wietlaniem mo¿liwo¶ci.
+%description -l pl.UTF-8
+FreeMat jest darmowym Å›rodowiskiem do szybkiego przetwarzania
+prototypÃ³w i danych dla inÅ¼ynierÃ³w i naukowcÃ³w. Jest podobny do
+komercyjnych systemÃ³w takich jak MATLAB z Mathworks i IDL z Research
+Group, ale na licencji Open Source. FreeMat cechuje siÄ™ miÄ™dzy innymi
+bezkodowym interfejsem do zewnÄ™trznego kodu C/C++/FORTRAN,
+rÃ³wnolegÅ‚ym/rozproszonym algorytmem obliczeÅ„ (poprzez MPI), oraz
+rysowaniem i wyÅ›wietlaniem moÅ¼liwoÅ›ci.
 
 %prep
 %setup -q -n %{name}-%{mversion}
