@@ -1,5 +1,7 @@
 # TODO:
 # - look at MPI support - doesn't work with lam for me :/
+# - build with ARPACK, UMFPACK, CYCLE COUNTER (whatever it is)
+#
 %define		fversion	%(echo %{version} |tr r -)
 %define		mversion	%(echo %{version} |cut -f -1 -d r)
 Summary:	FreeMat - an environment for rapid engineering and scientific processing
@@ -16,8 +18,8 @@ Patch0:		%{name}-qt4.patch
 URL:		http://freemat.sourceforge.net
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	blas-devel
 BuildRequires:	gcc-g77
+BuildRequires:	lapack-devel
 BuildRequires:	libjpeg-devel
 BuildRequires:	libpng-devel
 BuildRequires:	libstdc++-devel
