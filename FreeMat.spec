@@ -8,7 +8,7 @@ Summary:	FreeMat - an environment for rapid engineering and scientific processin
 Summary(pl.UTF-8):	FreeMat - środowisko do szybkiego przetwarzania inżynieryjnego i naukowego
 Name:		FreeMat
 Version:	3.5
-Release:	0.1
+Release:	1
 License:	MIT
 Group:		Applications/Math
 Source0:	http://dl.sourceforge.net/freemat/%{name}-%{fversion}.tar.gz
@@ -19,9 +19,14 @@ Patch1:		%{name}-link.patch
 URL:		http://freemat.sourceforge.net
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	ffcall-devel
+BuildRequires:	fftw3-devel
+BuildRequires:	fftw3-single-devel
 BuildRequires:	gcc-g77
 BuildRequires:	lapack-devel
 BuildRequires:	ncurses-devel
+BuildRequires:	pcre-devel
+BuildRequires:	portaudio-devel
 BuildRequires:	QtCore-devel
 BuildRequires:	QtGui-devel
 BuildRequires:	QtOpenGL-devel
