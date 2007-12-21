@@ -21,10 +21,6 @@ BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gcc-g77
 BuildRequires:	lapack-devel
-BuildRequires:	libjpeg-devel
-BuildRequires:	libpng-devel
-BuildRequires:	libstdc++-devel
-BuildRequires:	libtiff-devel
 BuildRequires:	ncurses-devel
 BuildRequires:	QtCore-devel
 BuildRequires:	QtGui-devel
@@ -32,7 +28,6 @@ BuildRequires:	QtOpenGL-devel
 BuildRequires:	QtNetwork-devel
 BuildRequires:	QtXml-devel
 BuildRequires:	qt4-build
-BuildRequires:	zlib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -85,5 +80,5 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/%{name}
-%{_datadir}/%{name}
+%{_datadir}/%{name}-%{version}
 %{_desktopdir}/%{name}.desktop
