@@ -1,0 +1,10 @@
+--- FreeMat-3.5/configure.in.orig	2007-12-21 02:45:05.237070538 +0100
++++ FreeMat-3.5/configure.in	2007-12-21 02:45:19.734858809 +0100
+@@ -289,6 +289,7 @@
+ 
+ AM_CONDITIONAL(USECLI, test x$ismingw = xfalse)
+ 
++LIBS="$LIBS -ltinfo"
+ 
+ AC_OUTPUT([Makefile src/Makefile libs/Makefile libs/libFreeMat/Makefile
+ 		    libs/libCore/Makefile libs/libFN/Makefile
