@@ -1,6 +1,5 @@
 # TODO:
 # - look at MPI support - doesn't work with lam for me :/
-# - use system libffi
 %define		fversion	%(echo %{version} |tr r -)
 %define		mversion	%(echo %{version} |cut -f -1 -d r)
 Summary:	FreeMat - an environment for rapid engineering and scientific processing
@@ -13,20 +12,22 @@ Group:		Applications/Math
 Source0:	http://dl.sourceforge.net/freemat/%{name}-%{fversion}.tar.gz
 # Source0-md5:	4cc41c1f9265a86134fd338076d1a65f
 Source1:	%{name}.desktop
-Patch0:		%{name}-system_ffi.patch
 URL:		http://freemat.sourceforge.net
-BuildRequires:	XFree86-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	blas-devel
-BuildRequires:	fltk-devel
 BuildRequires:	gcc-g77
-BuildRequires:	libffi-devel
 BuildRequires:	libjpeg-devel
 BuildRequires:	libpng-devel
 BuildRequires:	libstdc++-devel
 BuildRequires:	libtiff-devel
 BuildRequires:	ncurses-devel
+BuildRequires:	QtCore-devel
+BuildRequires:	QtGui-devel
+BuildRequires:	QtOpenGL-devel
+BuildRequires:	QtNetwork-devel
+BuildRequires:	QtXml-devel
+BuildRequires:	qt4-build
 BuildRequires:	zlib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -50,7 +51,6 @@ rysowaniem i wyświetlaniem możliwości.
 
 %prep
 %setup -q -n %{name}-%{mversion}
-%patch0
 
 %build
 CFLAGS="%{rpmcflags} -I/usr/include/ncurses"
