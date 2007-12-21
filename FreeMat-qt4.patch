@@ -1,0 +1,14 @@
+--- FreeMat-3.5/configure.in.orig	2007-12-21 02:21:39.951455670 +0100
++++ FreeMat-3.5/configure.in	2007-12-21 02:22:19.945354348 +0100
+@@ -47,9 +47,9 @@
+       AC_CHECK_FILE([$EXTRA_QT_INCLUDE_DIR/QWidget],
+       QT_CFLAGS="$QT_CFLAGS -I$EXTRA_QT_INCLUDE_DIR",
+       AC_MSG_WARN([QWidget not found])))
+-      AC_CHECK_PROGS(QT_MOC, [moc4 moc-qt4 moc], [])
++      AC_CHECK_PROGS(QT_MOC, [moc4 moc-qt4 moc qt4-moc], [])
+       AC_CHECK_PROGS(QT_RCC, [rcc4 rcc-qt4 rcc], [])
+-      AC_CHECK_PROGS(QT_UIC, [uic4 uic-qt4 uic], [])
++      AC_CHECK_PROGS(QT_UIC, [uic4 uic-qt4 uic qt4-uic], [])
+       if (test "$QT_MOC" = ""); then
+         AC_MSG_ERROR([QT4 moc is required.])
+       fi
