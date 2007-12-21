@@ -6,12 +6,12 @@
 Summary:	FreeMat - an environment for rapid engineering and scientific processing
 Summary(pl.UTF-8):	FreeMat - środowisko do szybkiego przetwarzania inżynieryjnego i naukowego
 Name:		FreeMat
-Version:	1.10r1
-Release:	1
+Version:	3.5
+Release:	0.1
 License:	MIT
 Group:		Applications/Math
 Source0:	http://dl.sourceforge.net/freemat/%{name}-%{fversion}.tar.gz
-# Source0-md5:	46c02f2c8c882c7d6f968d21c5a62b27
+# Source0-md5:	4cc41c1f9265a86134fd338076d1a65f
 Source1:	%{name}.desktop
 Patch0:		%{name}-system_ffi.patch
 URL:		http://freemat.sourceforge.net
