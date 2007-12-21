@@ -12,6 +12,7 @@ Group:		Applications/Math
 Source0:	http://dl.sourceforge.net/freemat/%{name}-%{fversion}.tar.gz
 # Source0-md5:	4cc41c1f9265a86134fd338076d1a65f
 Source1:	%{name}.desktop
+Patch0:		%{name}-qt4.patch
 URL:		http://freemat.sourceforge.net
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -51,6 +52,7 @@ rysowaniem i wyświetlaniem możliwości.
 
 %prep
 %setup -q -n %{name}-%{mversion}
+%patch0 -p1
 
 %build
 CFLAGS="%{rpmcflags} -I/usr/include/ncurses"
