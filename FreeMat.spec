@@ -1,6 +1,6 @@
 # TODO:
 # - look at MPI support - doesn't work with lam for me :/
-# - build with ARPACK, UMFPACK, CYCLE COUNTER (whatever it is)
+# - build with CYCLE COUNTER (required fftw_cycle.h)
 #
 %define		fversion	%(echo %{version} |tr r -)
 %define		mversion	%(echo %{version} |cut -f -1 -d r)
@@ -19,6 +19,7 @@ Patch1:		%{name}-link.patch
 URL:		http://freemat.sourceforge.net
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	arpack-devel
 BuildRequires:	ffcall-devel
 BuildRequires:	fftw3-devel
 BuildRequires:	fftw3-single-devel
@@ -33,6 +34,7 @@ BuildRequires:	QtOpenGL-devel
 BuildRequires:	QtNetwork-devel
 BuildRequires:	QtXml-devel
 BuildRequires:	qt4-build
+BuildRequires:	UMFPACK-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
