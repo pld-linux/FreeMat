@@ -17,6 +17,12 @@ Source1:	%{name}.desktop
 Patch0:		%{name}-qt4.patch
 Patch1:		%{name}-link.patch
 URL:		http://freemat.sourceforge.net
+BuildRequires:	QtCore-devel
+BuildRequires:	QtGui-devel
+BuildRequires:	QtOpenGL-devel
+BuildRequires:	QtNetwork-devel
+BuildRequires:	QtXml-devel
+BuildRequires:	UMFPACK-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	arpack-devel
@@ -28,13 +34,7 @@ BuildRequires:	lapack-devel
 BuildRequires:	ncurses-devel
 BuildRequires:	pcre-devel
 BuildRequires:	portaudio-devel
-BuildRequires:	QtCore-devel
-BuildRequires:	QtGui-devel
-BuildRequires:	QtOpenGL-devel
-BuildRequires:	QtNetwork-devel
-BuildRequires:	QtXml-devel
 BuildRequires:	qt4-build
-BuildRequires:	UMFPACK-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
