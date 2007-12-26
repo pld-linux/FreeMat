@@ -5,6 +5,5 @@ Comment[pl]=Środowisko do szybkiego przetwarzania inżynierskiego i naukowego
 Exec=FreeMat
 Terminal=true
 Type=Application
-Encoding=UTF-8
 Categories=Education;Science;Math;
 # vi: encoding=utf-8
