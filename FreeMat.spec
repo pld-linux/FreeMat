@@ -57,8 +57,8 @@ rysowaniem i wyświetlaniem możliwości.
 
 %prep
 %setup -q -n %{name}-%{mversion}
-%patch0 -p1
-%patch1 -p1
+%patch -P0 -p1
+%patch -P1 -p1
 
 %build
 CFLAGS="%{rpmcflags} -I/usr/include/ncurses"
